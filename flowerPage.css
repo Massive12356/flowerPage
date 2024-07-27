@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type:none;
+
+
+}
+:root{
+    --textColorG--: #2d5253;
+    --textColorB:#000000;
+    --buttonColor:#fffbf7;
+    --Background-gradient: linear-gradient(to bottom,#e0f5d4,#c3e5ca);
+    --linksBG-Color:#c0e7d2;
+    --Button-Color:#4a7878;
+}
+
+body{
+    height: 95vh;
+    background-image: var(--Background-gradient);
+}
+
+header{
+    width:70vw;
+    height: 10vh;
+    background-color:var(--linksBG-Color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-radius: 50px;
+    border: 2px solid #89ac9d;
+    font-family:"Nunito Sans", sans-serif; 
+}
+header img{
+    width: 4vw;
+    height: 8vh;
+    border-radius: 50%;
+}
+header ul {
+    display: flex;
+}
+
+header ul li {
+    margin-left: 50px;
+}
+header ul li a{
+    font-size: 1.3rem;
+    color: var(--textColorB);
+    font-weight: 600;
+}
+
+.fa-bars{
+    display: none;
+    font-size: 2.5rem;
+}
+
+.loginDiv a{
+    color: var(--buttonColor);
+    background-color: var(--Button-Color);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+}
+
+section{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+}
+.textDiv{
+    width: 50%;
+    height: 60vh;
+    padding: 60px ; 
+}
+.textDiv h1{
+    font-size: 5rem;
+    font-family: "Handlee", cursive;
+    color: var(--Button-Color);
+    font-weight:100;
+    margin-bottom: 3%;
+    
+}
+.textDiv p{
+    color: var(--textColorB);
+    line-height:1.5 ;
+    margin-bottom: 4%;
+    font-weight: 600;
+}
+.btnDiv{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-around;
+    height: 5vh;
+}
+.trailDiv a{
+    color: var(--buttonColor);
+    background-color: var(--Button-Color);
+    padding: 11px 18px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-family:"Nunito Sans", sans-serif; 
+}
+.watchDiv{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.watchDiv i{
+    background-color: var(--buttonColor);
+    padding: 15px;
+    border-radius: 50px;
+    margin-right: 15px;
+    
+}
+.watchDiv p{
+    color: var(--textColorG--);
+    font-weight: 800;
+    font-family:"Nunito Sans", sans-serif;
+    padding-top: 5px;
+}
+.imgDiv{
+    width: 50%;
+    height: 80vh;
+    
+    padding: px;
+}
+.imgDiv img{
+    width: 40vw;
+    border-radius: 50%;
+    height: 80vh;
+    float: right;
+}
+
+/* -----------------------RESPONSIVE DESIGN -------------------*/
+
+@media (max-width:700px){
+
+    header{
+        width:95vw;
+        height: 7vh;
+    }
+    header ul{
+        position: absolute;
+        display:none;
+        top: 70px;
+        background-color: var(--linksBG-Color);
+        padding: 30px;
+        border-radius: 5px;
+    }
+    header ul li{
+        margin-left: 10px;
+        padding: 8px;
+    }
+    header ul li a{
+        font-size: 0.9rem;
+    }
+    header .fa-bars{
+        display: block;
+        font-size: 1.8rem;
+    }
+    header img{
+        width: 15%;
+        height: 5vh;
+    }
+    header .loginDiv a{
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    #navBar.active {
+        display: inline-flex;
+    }
+    section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .textDiv{
+        width: 100%;
+        height: 60vh;
+        padding: 10px ; 
+    }
+    .textDiv h1{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    .textDiv p{
+        font-size: 0.9rem;
+    }
+    .btnDiv{
+        width: 100%;
+    }
+    .trailDiv a{
+        padding: 7px 7px;
+        font-size: 0.9rem;
+    }
+    .watchDiv i{
+        padding: 9px;
+        border-radius: 50px;
+        margin-right: 8px;
+        font-size: 0.6rem;
+    }
+    .watchDiv p{
+        font-size: 0.8rem;
+    }
+    .trailDiv{
+        margin-top: 1.3%;
+    }
+    .watchDiv{
+        width: 40%;
+        margin-right: 20%;
+    }
+    .imgDiv{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgDiv img{
+        width: 80vw;
+        height: 40vh;
+        float: none;
+    }
+}
